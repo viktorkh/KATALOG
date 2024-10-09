@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תוצאות חיפוש שירותים AWS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: right;
+        }
+
+        h1 {
+            text-align: right;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service {
+            background-color: #e6f7ff;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .service h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .service p {
+            margin: 5px 0;
+        }
+
+        .service a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .service a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>תוצאות שירותי AWS</h1>
+        <div id="services"></div>
+    </div>
+
+    <script>
+        // Fetch the JSON data
+        fetch('JYSON\AWS.json') // הכנס כאן את הנתיב לקובץ JSON שלך
+            .then(response => response.json())
+            .then(data => {
+                const servicesContainer = document.getElementById('services');
+                
+                // Iterate over the services and display them
+                data.prices.forEach(service => {
+                    const serviceDiv = document.createElement('div');
+                    serviceDiv.classList.add('service');
+
+                    serviceDiv.innerHTML = `
+                        <h2>${service.attributes['aws:serviceName']}</h2>
+                        <p>אזור: ${service.attributes['aws:region']}</p>
+                        <p><a href="${service.attributes['aws:serviceUrl']}" target="_blank">לקישור</a></p>
+                    `;
+
+                    servicesContainer.appendChild(serviceDiv);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching JSON:', error);
+            });
+    </script>
+
+</body>
+</html>

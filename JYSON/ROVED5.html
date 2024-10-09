@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תוצאות חיפוש שירותי AWS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* עיצוב הריבועים של השירותים */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 ריבועים בשורה */
+            gap: 10px;
+            justify-items: center;
+        }
+
+        .service {
+            background-color: #e6f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 150px;
+            height: 100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .service h3 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .service:hover {
+            background-color: #b3e0ff;
+        }
+
+        .service a {
+            color: #00bfff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="serviceContainer">
+        <h1>תוצאות חיפוש</h1>
+        <div id="services" class="services-grid"></div>
+    </div>
+    <script>
+        // מקבל את השם שהוזן ב-URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('name') || "";
+
+        // מיכל להצגת השירותים
+        const serviceContainer = document.getElementById('services');
+
+        // קריאה לקובץ JSON יחיד
+        fetch('FIVE.json')
+        .then(response => response.json())
+        .then(awsData => { // JSON יחיד
+            const awsServices = awsData.prices.filter(service => 
+                service.attributes["aws:serviceName"].toLowerCase().includes(searchTerm.toLowerCase())
+            );
+
+            // מציג את השירותים מהקובץ
+            awsServices.forEach(service => {
+                const serviceDiv = document.createElement('div');
+                serviceDiv.classList.add('service');
+                serviceDiv.innerHTML = `<h3>${service.attributes["aws:serviceName"]}</h3>`;
+                serviceDiv.addEventListener('click', () => {
+                    window.location.href = `ONE.html?name=${service.attributes["aws:serviceName"]}`;
+                });
+                serviceContainer.appendChild(serviceDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading JSON:', error);
+            serviceContainer.innerHTML =

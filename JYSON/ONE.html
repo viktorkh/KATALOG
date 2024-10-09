@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרטי שירות AWS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-details {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .service-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-details p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>פרטי שירות</h1>
+        <div class="service-details" id="serviceDetails"></div>
+    </div>
+
+    <script>
+        // מקבל את שם השירות מה-URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceName = urlParams.get('name');
+
+        // מיכל להצגת פרטי השירות
+        const serviceDetailsContainer = document.getElementById('serviceDetails');
+
+        fetch('AWS.json')
+    .then(response => response.json())
+    .then(services => {
+        const service = services.prices.find(s => s.attributes["aws:serviceName"] === serviceName);
+
+        if (service) {
+            // בודקים אם ה-region הוא "ap-east-1" וממירים ל"ישראל"
+            const region = service.attributes["aws:region"] === "ap-east-1" ? "ישראל" : service.attributes["aws:region"];
+
+            serviceDetailsContainer.innerHTML = `
+                <h3>${service.attributes["aws:serviceName"]}</h3>
+                <br> <strong>תיאור המוצר:</strong>
+                <p><strong>אזור:</strong> ${region}</p>
+                <p><strong>קישור לשירות:</strong> <a href="${service.attributes["aws:serviceUrl"]}" target="_blank">${service.attributes["aws:serviceUrl"]}</a></p>
+            `;
+        } else {
+            serviceDetailsContainer.innerHTML = "<p>שירות זה לא נמצא.</p>";
+        }
+    })
+    .catch(error => {
+        console.error('Error loading JSON:', error);
+        serviceDetailsContainer.innerHTML = "<p>אירעה שגיאה בטעינת פרטי השירות.</p>";
+    });
+    </script>
+
+</body>
+</html>
+ 

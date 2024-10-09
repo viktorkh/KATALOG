@@ -1,0 +1,1122 @@
+{
+    "metadata": {
+        "copyright": "Copyright 2024 Amazon.com, Inc. or its affiliates. All rights reserved.",
+        "disclaimer": "This file is intended for use only on aws.amazon.com. We do not guarantee its availability or accuracy.",
+        "format:version": "1.0",
+        "source:version": "20240801012700"
+    },
+    "prices": [
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Translate",
+                "aws:serviceUrl": "https://aws.amazon.com/translate/"
+            },
+            "id": "translate:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Route 53",
+                "aws:serviceUrl": "https://aws.amazon.com/route53/"
+            },
+            "id": "route53:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Shield",
+                "aws:serviceUrl": "https://aws.amazon.com/shield/"
+            },
+            "id": "shield:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Managed Workflows for Apache Airflow",
+                "aws:serviceUrl": "https://aws.amazon.com/managed-workflows-for-apache-airflow/"
+            },
+            "id": "mwaa:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS DataSync",
+                "aws:serviceUrl": "https://aws.amazon.com/datasync"
+            },
+            "id": "datasync:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon CloudWatch Logs",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudwatch/"
+            },
+            "id": "logs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Red Hat OpenShift Service on AWS (ROSA)",
+                "aws:serviceUrl": "https://aws.amazon.com/rosa/"
+            },
+            "id": "rosa:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CloudShell",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudshell/"
+            },
+            "id": "cloudshell:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Cloud Map",
+                "aws:serviceUrl": "https://aws.amazon.com/cloud-map/"
+            },
+            "id": "servicediscovery:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon SageMaker",
+                "aws:serviceUrl": "https://aws.amazon.com/sagemaker/"
+            },
+            "id": "sagemaker:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Transit Gateway",
+                "aws:serviceUrl": "https://aws.amazon.com/transit-gateway/"
+            },
+            "id": "transitgateway:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Systems Manager",
+                "aws:serviceUrl": "https://aws.amazon.com/systems-manager/"
+            },
+            "id": "ssm:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Inspector",
+                "aws:serviceUrl": "https://aws.amazon.com/inspector/"
+            },
+            "id": "inspector2:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CloudTrail",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudtrail/"
+            },
+            "id": "cloudtrail:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CodeDeploy",
+                "aws:serviceUrl": "https://aws.amazon.com/codedeploy/"
+            },
+            "id": "codedeploy:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS IoT Device Defender",
+                "aws:serviceUrl": "https://aws.amazon.com/iot-device-defender/"
+            },
+            "id": "iotdevicedefender:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic Compute Cloud (EC2)",
+                "aws:serviceUrl": "https://aws.amazon.com/ec2/"
+            },
+            "id": "ec2:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Polly",
+                "aws:serviceUrl": "https://aws.amazon.com/polly/"
+            },
+            "id": "polly:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Athena",
+                "aws:serviceUrl": "https://aws.amazon.com/athena/"
+            },
+            "id": "athena:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Managed Service for Apache Flink",
+                "aws:serviceUrl": "https://aws.amazon.com/managed-service-apache-flink/"
+            },
+            "id": "kinesisanalytics:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Chatbot",
+                "aws:serviceUrl": "https://aws.amazon.com/chatbot/"
+            },
+            "id": "chatbot:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Redshift",
+                "aws:serviceUrl": "https://aws.amazon.com/redshift/"
+            },
+            "id": "redshift:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Identity and Access Management (IAM)",
+                "aws:serviceUrl": "https://aws.amazon.com/iam"
+            },
+            "id": "iam:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Data Firehose",
+                "aws:serviceUrl": "https://aws.amazon.com/firehose/"
+            },
+            "id": "firehose:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Kinesis Video Streams",
+                "aws:serviceUrl": "https://aws.amazon.com/kinesis/video-streams/"
+            },
+            "id": "kinesisvideo:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon OpenSearch Service",
+                "aws:serviceUrl": "https://aws.amazon.com/opensearch-service/"
+            },
+            "id": "es:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon GuardDuty",
+                "aws:serviceUrl": "https://aws.amazon.com/guardduty/"
+            },
+            "id": "guardduty:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Launch Wizard",
+                "aws:serviceUrl": "https://aws.amazon.com/launchwizard/"
+            },
+            "id": "launchwizard:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "VMware Cloud on AWS",
+                "aws:serviceUrl": "https://aws.amazon.com/vmware/"
+            },
+            "id": "vmwarecloudonaws:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon MQ",
+                "aws:serviceUrl": "https://aws.amazon.com/amazon-mq/"
+            },
+            "id": "mq:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Resource Access Manager (RAM)",
+                "aws:serviceUrl": "https://aws.amazon.com/ram/"
+            },
+            "id": "ram:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Health Dashboard",
+                "aws:serviceUrl": "https://aws.amazon.com/premiumsupport/technology/aws-health-dashboard/"
+            },
+            "id": "awshealthdashboard:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Managed Services",
+                "aws:serviceUrl": "https://aws.amazon.com/managed-services/"
+            },
+            "id": "managedservices:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Well-Architected Tool",
+                "aws:serviceUrl": "https://aws.amazon.com/well-architected-tool"
+            },
+            "id": "wellarchitectedtool:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Simple Queue Service (SQS)",
+                "aws:serviceUrl": "https://aws.amazon.com/sqs/"
+            },
+            "id": "sqs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Compute Optimizer",
+                "aws:serviceUrl": "https://aws.amazon.com/compute-optimizer/"
+            },
+            "id": "compute-optimizer:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS WAF",
+                "aws:serviceUrl": "https://aws.amazon.com/waf/"
+            },
+            "id": "waf:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Outposts",
+                "aws:serviceUrl": "https://aws.amazon.com/outposts/"
+            },
+            "id": "outposts:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon API Gateway",
+                "aws:serviceUrl": "https://aws.amazon.com/api-gateway/"
+            },
+            "id": "apigateway:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Step Functions",
+                "aws:serviceUrl": "https://aws.amazon.com/step-functions/details/"
+            },
+            "id": "stepfunctions:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS License Manager",
+                "aws:serviceUrl": "https://aws.amazon.com/license-manager/"
+            },
+            "id": "license-manager:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Directory Service",
+                "aws:serviceUrl": "https://aws.amazon.com/directoryservice/"
+            },
+            "id": "ds:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Glue",
+                "aws:serviceUrl": "https://aws.amazon.com/glue/"
+            },
+            "id": "glue:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS PrivateLink",
+                "aws:serviceUrl": "https://aws.amazon.com/privatelink/"
+            },
+            "id": "privatelink:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Resource Explorer",
+                "aws:serviceUrl": "https://aws.amazon.com/resourceexplorer/"
+            },
+            "id": "resource-explorer-2:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Certificate Manager",
+                "aws:serviceUrl": "https://aws.amazon.com/certificate-manager/"
+            },
+            "id": "acm:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Artifact",
+                "aws:serviceUrl": "https://aws.amazon.com/artifact/"
+            },
+            "id": "artifact:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic Kubernetes Service (EKS)",
+                "aws:serviceUrl": "https://aws.amazon.com/eks"
+            },
+            "id": "eks:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "CloudEndure Disaster Recovery",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudendure-disaster-recovery/"
+            },
+            "id": "cloudenduredisasterrecovery:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Firewall Manager",
+                "aws:serviceUrl": "https://aws.amazon.com/firewall-manager/"
+            },
+            "id": "fms:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CloudFormation",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudformation/"
+            },
+            "id": "cloudformation:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Relational Database Service (RDS)",
+                "aws:serviceUrl": "https://aws.amazon.com/rds/"
+            },
+            "id": "rds:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Kinesis Data Streams",
+                "aws:serviceUrl": "https://aws.amazon.com/kinesis/streams/"
+            },
+            "id": "kinesis:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Cognito",
+                "aws:serviceUrl": "https://aws.amazon.com/cognito/"
+            },
+            "id": "cognito-identity:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon FSx for NetApp ONTAP",
+                "aws:serviceUrl": "https://aws.amazon.com/fsx/netapp-ontap"
+            },
+            "id": "fsx-ontap:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Detective",
+                "aws:serviceUrl": "https://aws.amazon.com/detective/"
+            },
+            "id": "detective:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Control Tower",
+                "aws:serviceUrl": "https://aws.amazon.com/controltower"
+            },
+            "id": "controltower:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Lumberyard",
+                "aws:serviceUrl": "https://aws.amazon.com/lumberyard/"
+            },
+            "id": "lumberyard:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Resource Groups",
+                "aws:serviceUrl": "https://docs.aws.amazon.com/ARG/index.html"
+            },
+            "id": "resource-groups:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Managed Streaming for Apache Kafka",
+                "aws:serviceUrl": "https://aws.amazon.com/msk/"
+            },
+            "id": "kafka:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Trusted Advisor",
+                "aws:serviceUrl": "https://aws.amazon.com/premiumsupport/trustedadvisor/"
+            },
+            "id": "trustedadvisor:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Virtual Private Cloud (VPC)",
+                "aws:serviceUrl": "https://aws.amazon.com/vpc/"
+            },
+            "id": "vpc:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Signer",
+                "aws:serviceUrl": "https://docs.aws.amazon.com/signer/latest/developerguide/Welcome.html"
+            },
+            "id": "signer:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Direct Connect",
+                "aws:serviceUrl": "https://aws.amazon.com/directconnect/"
+            },
+            "id": "directconnect:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS IoT Core",
+                "aws:serviceUrl": "https://aws.amazon.com/iot/"
+            },
+            "id": "iot:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS IAM Identity Center",
+                "aws:serviceUrl": "https://aws.amazon.com/iam/identity-center/"
+            },
+            "id": "identity-center:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS IQ",
+                "aws:serviceUrl": "https://aws.amazon.com/iq/"
+            },
+            "id": "aiq:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Aurora",
+                "aws:serviceUrl": "https://aws.amazon.com/rds/aurora/"
+            },
+            "id": "aurora:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "CloudEndure Migration",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudendure-migration/"
+            },
+            "id": "cloudenduremigration:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Resilience Hub",
+                "aws:serviceUrl": "https://aws.amazon.com/resilience-hub/"
+            },
+            "id": "resiliencehub:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Fargate",
+                "aws:serviceUrl": "https://aws.amazon.com/fargate/"
+            },
+            "id": "fargate:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic Block Store (EBS)",
+                "aws:serviceUrl": "https://aws.amazon.com/ebs/"
+            },
+            "id": "ebs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Backup",
+                "aws:serviceUrl": "https://aws.amazon.com/backup/"
+            },
+            "id": "backup:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Global Accelerator",
+                "aws:serviceUrl": "https://aws.amazon.com/global-accelerator"
+            },
+            "id": "globalaccelerator:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Elastic Disaster Recovery (DRS)",
+                "aws:serviceUrl": "https://aws.amazon.com/disaster-recovery/"
+            },
+            "id": "drs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon FSx",
+                "aws:serviceUrl": "https://aws.amazon.com/fsx/"
+            },
+            "id": "fsx:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS X-Ray",
+                "aws:serviceUrl": "https://aws.amazon.com/xray/"
+            },
+            "id": "xray:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon EventBridge",
+                "aws:serviceUrl": "https://aws.amazon.com/eventbridge/"
+            },
+            "id": "eventbridge:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Neptune",
+                "aws:serviceUrl": "https://aws.amazon.com/neptune/"
+            },
+            "id": "neptune:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Fault Injection Service",
+                "aws:serviceUrl": "https://aws.amazon.com/fis/"
+            },
+            "id": "fis:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Private Certificate Authority",
+                "aws:serviceUrl": "https://aws.amazon.com/private-ca/"
+            },
+            "id": "acm-pca:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Verified Permissions",
+                "aws:serviceUrl": "https://aws.amazon.com/verified-permissions/"
+            },
+            "id": "verifiedpermissions:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CloudHSM",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudhsm/"
+            },
+            "id": "cloudhsmv2:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Secrets Manager",
+                "aws:serviceUrl": "https://aws.amazon.com/secrets-manager/"
+            },
+            "id": "secretsmanager:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Batch",
+                "aws:serviceUrl": "https://aws.amazon.com/batch/"
+            },
+            "id": "batch:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Amplify",
+                "aws:serviceUrl": "https://aws.amazon.com/amplify/"
+            },
+            "id": "amplify:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic MapReduce (EMR)",
+                "aws:serviceUrl": "https://aws.amazon.com/emr/"
+            },
+            "id": "emr:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Simple Workflow Service (SWF)",
+                "aws:serviceUrl": "https://aws.amazon.com/swf/"
+            },
+            "id": "swf:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Marketplace",
+                "aws:serviceUrl": "https://aws.amazon.com/mp/"
+            },
+            "id": "marketplace:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Application Migration Service (MGN)",
+                "aws:serviceUrl": "https://aws.amazon.com/application-migration-service/"
+            },
+            "id": "mgn:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Transfer Family",
+                "aws:serviceUrl": "https://aws.amazon.com/aws-transfer-family/"
+            },
+            "id": "transfer:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "EC2 Image Builder",
+                "aws:serviceUrl": "https://aws.amazon.com/image-builder/"
+            },
+            "id": "imagebuilder:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CodePipeline",
+                "aws:serviceUrl": "https://aws.amazon.com/codepipeline/"
+            },
+            "id": "codepipeline:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Auto Scaling",
+                "aws:serviceUrl": "https://aws.amazon.com/autoscaling/"
+            },
+            "id": "application-autoscaling:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Lake Formation",
+                "aws:serviceUrl": "https://aws.amazon.com/lake-formation/"
+            },
+            "id": "lakeformation:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon CloudWatch",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudwatch/"
+            },
+            "id": "cloudwatch:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Cloud9",
+                "aws:serviceUrl": "https://aws.amazon.com/cloud9/"
+            },
+            "id": "cloud9:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Snowball",
+                "aws:serviceUrl": "https://aws.amazon.com/snowball/"
+            },
+            "id": "snowball:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Database Migration Service",
+                "aws:serviceUrl": "https://aws.amazon.com/dms/"
+            },
+            "id": "dms:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Serverless Application Repository",
+                "aws:serviceUrl": "https://aws.amazon.com/serverless/serverlessrepo/"
+            },
+            "id": "serverlessrepo:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Elastic Beanstalk",
+                "aws:serviceUrl": "https://aws.amazon.com/elasticbeanstalk/"
+            },
+            "id": "elasticbeanstalk:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Organizations",
+                "aws:serviceUrl": "https://aws.amazon.com/organizations"
+            },
+            "id": "organizations:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon ElastiCache",
+                "aws:serviceUrl": "https://aws.amazon.com/elasticache/"
+            },
+            "id": "elasticache:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Transcribe",
+                "aws:serviceUrl": "https://aws.amazon.com/transcribe/"
+            },
+            "id": "transcribe:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS IoT Device Management",
+                "aws:serviceUrl": "https://aws.amazon.com/iot-device-management/"
+            },
+            "id": "iotdevicemanagement:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Macie",
+                "aws:serviceUrl": "https://aws.amazon.com/macie/"
+            },
+            "id": "macie:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Keyspaces (for Apache Cassandra)",
+                "aws:serviceUrl": "https://aws.amazon.com/keyspaces/"
+            },
+            "id": "mcs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Key Management Service",
+                "aws:serviceUrl": "https://aws.amazon.com/kms/"
+            },
+            "id": "kms:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Support",
+                "aws:serviceUrl": "https://aws.amazon.com/premiumsupport/"
+            },
+            "id": "support:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Simple Notification Service (SNS)",
+                "aws:serviceUrl": "https://aws.amazon.com/sns/"
+            },
+            "id": "sns:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS VPN",
+                "aws:serviceUrl": "https://aws.amazon.com/vpn/"
+            },
+            "id": "vpn:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Network Firewall",
+                "aws:serviceUrl": "https://aws.amazon.com/network-firewall/"
+            },
+            "id": "network-firewall:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Storage Gateway",
+                "aws:serviceUrl": "https://aws.amazon.com/storagegateway/"
+            },
+            "id": "storagegateway:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon EC2 Auto Scaling",
+                "aws:serviceUrl": "https://aws.amazon.com/ec2/autoscaling/"
+            },
+            "id": "autoscaling:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Service Catalog",
+                "aws:serviceUrl": "https://aws.amazon.com/servicecatalog/"
+            },
+            "id": "servicecatalog:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon FSx for Lustre",
+                "aws:serviceUrl": "https://aws.amazon.com/fsx/lustre/"
+            },
+            "id": "fsx-lustre:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS AppSync",
+                "aws:serviceUrl": "https://aws.amazon.com/appsync/"
+            },
+            "id": "appsync:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic Container Registry (ECR)",
+                "aws:serviceUrl": "https://aws.amazon.com/ecr/"
+            },
+            "id": "ecr:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Elastic Load Balancing",
+                "aws:serviceUrl": "https://aws.amazon.com/elasticloadbalancing/"
+            },
+            "id": "elb:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CodeCommit",
+                "aws:serviceUrl": "https://aws.amazon.com/codecommit/"
+            },
+            "id": "codecommit:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Simple Storage Service (S3)",
+                "aws:serviceUrl": "https://aws.amazon.com/s3/"
+            },
+            "id": "s3:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon MemoryDB",
+                "aws:serviceUrl": "https://aws.amazon.com/memorydb"
+            },
+            "id": "memorydb:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic File System (EFS)",
+                "aws:serviceUrl": "https://aws.amazon.com/efs/"
+            },
+            "id": "efs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS User Notifications",
+                "aws:serviceUrl": "https://aws.amazon.com/notifications/"
+            },
+            "id": "notifications:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon GameLift",
+                "aws:serviceUrl": "https://aws.amazon.com/gamelift/"
+            },
+            "id": "gamelift:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Security Hub",
+                "aws:serviceUrl": "https://aws.amazon.com/security-hub/"
+            },
+            "id": "securityhub:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon FSx for OpenZFS",
+                "aws:serviceUrl": "https://aws.amazon.com/fsx/openzfs"
+            },
+            "id": "fsx-openzfs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon DynamoDB",
+                "aws:serviceUrl": "https://aws.amazon.com/dynamodb/"
+            },
+            "id": "dynamodb:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon DocumentDB (with MongoDB compatibility)",
+                "aws:serviceUrl": "https://aws.amazon.com/documentdb/"
+            },
+            "id": "docdb:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Elemental MediaConnect",
+                "aws:serviceUrl": "https://aws.amazon.com/mediaconnect"
+            },
+            "id": "mediaconnect:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Config",
+                "aws:serviceUrl": "https://aws.amazon.com/config/"
+            },
+            "id": "config:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon CloudFront",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudfront/"
+            },
+            "id": "cloudfront:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Lambda",
+                "aws:serviceUrl": "https://aws.amazon.com/lambda/"
+            },
+            "id": "lambda:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "FreeRTOS",
+                "aws:serviceUrl": "https://aws.amazon.com/freertos/"
+            },
+            "id": "freertosota:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS App Mesh",
+                "aws:serviceUrl": "https://aws.amazon.com/app-mesh/"
+            },
+            "id": "appmesh:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS Cloud Control API",
+                "aws:serviceUrl": "https://aws.amazon.com/cloudcontrolapi/"
+            },
+            "id": "cloudcontrolapi:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon FSx for Windows File Server",
+                "aws:serviceUrl": "https://aws.amazon.com/fsx/windows/"
+            },
+            "id": "fsx-windows:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "Amazon Elastic Container Service (ECS)",
+                "aws:serviceUrl": "https://aws.amazon.com/ecs/"
+            },
+            "id": "ecs:ap-east-1"
+        },
+        {
+            "attributes": {
+                "aws:region": "ap-east-1",
+                "aws:serviceName": "AWS CodeBuild",
+                "aws:serviceUrl": "https://aws.amazon.com/codebuild/"
+            },
+            "id": "codebuild:ap-east-1"
+        }
+    ]
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קטלוג מוצרי ענן</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            width: 70%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .search-bar input[type="text"], .search-bar select {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .autocomplete-suggestions {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .autocomplete-suggestion {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .autocomplete-suggestion:hover {
+            background-color: #e6f7ff;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px; 
+        }
+
+        .button {
+            padding: 20px;
+            width: 150px;
+            background-color: #e6f7ff;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b3e0ff;
+        }
+
+        .button:active {
+            background-color: #80cfff;
+        }
+
+        .button-title {
+            font-size: 1.2rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1548b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1548b4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>קטלוג מוצרי ענן</h1>
+
+        <div class="buttons">
+            <div class="button">
+                <div class="button-title">AWS</div>
+                <div>קטגוריות</div>
+            </div>
+            <div class="button">
+                <div class="button-title">GCP</div>
+                <div>קטגוריות</div>
+            </div>
+            <div class="button" id="layer5Button">
+                <div class="button-title">רובד 5</div>
+                <div>קטגוריות</div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <select id="regionSelect">
+                <option value="">בחר</option>
+                <option value="abroad">בחו"ל</option>
+                <option value="israel">בארץ</option>
+            </select>
+            <input id="searchBar" type="text" placeholder="הכנס שם מוצר" />
+            <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+            <button id="searchBtn">חפש</button>
+        </div>
+    </div>
+
+<script>
+
+let allProducts = [];
+
+// טעינת הנתונים משני קבצי JSON
+Promise.all([
+    fetch('AWS.json').then(response => response.json()),
+    fetch('FIVE.json').then(response => response.json())
+]).then(([awsData, fiveData]) => {
+    console.log("AWS Data:", awsData);
+    console.log("FIVE Data:", fiveData);
+    // שליפת מוצרים מתוך קבצי ה-JSON
+    const awsProducts = awsData.prices.map(service => service.attributes["aws:serviceName"]);
+    const fiveProducts = fiveData["שירותים מאושרים - AWS"].map(service => service.Column5);
+    
+    // שילוב שני המערכים למערך אחד
+    allProducts = [...awsProducts, ...fiveProducts];
+});
+
+// פונקציה לטיפול בהקלדה והצגת הצעות להשלמה אוטומטית
+document.getElementById('searchBar').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const autocompleteList = document.getElementById('autocomplete-list');
+    autocompleteList.innerHTML = '';
+
+    if (query.length === 0) {
+        return;
+    }
+
+    const filteredProducts = allProducts.filter(product => product.toLowerCase().includes(query));
+
+    filteredProducts.forEach(product => {
+        const suggestionItem = document.createElement('div');
+        suggestionItem.classList.add('autocomplete-suggestion');
+        suggestionItem.innerText = product;
+        suggestionItem.addEventListener('click', function() {
+            document.getElementById('searchBar').value = product;
+            autocompleteList.innerHTML = '';
+        });
+        autocompleteList.appendChild(suggestionItem);
+    });
+});
+
+// פונקציה לחיפוש מוצר
+document.getElementById("searchBtn").addEventListener("click", function() {
+    const productName = document.getElementById("searchBar").value;
+    const region = document.getElementById("regionSelect").value;
+
+    let searchUrl = `KATALOG.html?name=${productName}`;
+    if (region === "israel") {
+        searchUrl += `&region=ap-east-1`;
+    } else if (region === "abroad") {
+        searchUrl += `&region=all`;
+    }
+
+    window.location.href = searchUrl;
+});
+
+// פונקציה לפתיחת עמוד חדש כאשר לוחצים על רובד 5
+document.getElementById("layer5Button").addEventListener("click", function() {
+    window.location.href = "FIVE.html";  // כאן אתה מפנה את העמוד החדש
+});
+</script>
+
+</body>
+</html>
