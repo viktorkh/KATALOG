@@ -158,6 +158,8 @@
     </div>
 
     <script>
+
+
         let allProducts = [];
         let awsProducts = [];
         let fiveProducts = [];
@@ -218,7 +220,15 @@
                 autocompleteList.appendChild(suggestionItem);
             });
         });
-
+                // חיפוש הכפתור עם הטקסט 'AWS' והוספת אירוע לחיצה
+        const buttons = document.querySelectorAll('.button-title');
+        buttons.forEach(button => {
+            if (button.innerText.trim() === 'AWS') {
+                button.parentElement.addEventListener('click', function () {
+                    window.location.href = 'KATALOG.html'; // הפניה לדף הקטלוג
+                });
+            }
+        });
         // פונקציה להצגת פרטי מוצר
         function displayProductDetails(productName) {
             const region = document.getElementById("regionSelect");
