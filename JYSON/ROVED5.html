@@ -71,25 +71,29 @@
         // מיכל להצגת השירותים
         const serviceContainer = document.getElementById('services');
 
-        // קריאה לקובץ JSON יחיד
         fetch('FIVE.json')
-        .then(response => response.json())
-        .then(awsData => { // JSON יחיד
-            const awsServices = awsData.prices.filter(service => 
-                service.attributes["aws:serviceName"].toLowerCase().includes(searchTerm.toLowerCase())
-            );
+    .then(response => response.json())
+    .then(awsData => { // JSON יחיד
+        const awsServices = awsData.prices.filter(service => 
+            service.attributes["aws:serviceName"].toLowerCase().includes(searchTerm.toLowerCase())
+        );
 
-            // מציג את השירותים מהקובץ
-            awsServices.forEach(service => {
-                const serviceDiv = document.createElement('div');
-                serviceDiv.classList.add('service');
-                serviceDiv.innerHTML = `<h3>${service.attributes["aws:serviceName"]}</h3>`;
+        // מציג את השירותים מהקובץ, למעט "שם השירות"
+        awsServices.forEach(service => {
+            const serviceName = service.attributes["aws:serviceName"];
+            
+            if (serviceName !== "שם השירות") { // מוודא ששם השירות לא יוצג
+                const serviceDiv = document.createElement('div');                                                      
+                serviceDiv.classList.add('service');                             
+                serviceDiv.innerHTML = `<h3>${serviceName}</h3>`;
                 serviceDiv.addEventListener('click', () => {
-                    window.location.href = `ONE.html?name=${service.attributes["aws:serviceName"]}`;
+                    window.location.href = `ONE.html?name=${serviceName}`;
                 });
                 serviceContainer.appendChild(serviceDiv);
-            });
-        })
+            }
+        });
+    })
         .catch(error => {
             console.error('Error loading JSON:', error);
-            serviceContainer.innerHTML =
+            serviceContainer.innerHTML = "Error loading services";
+        });

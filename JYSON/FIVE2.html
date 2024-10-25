@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פרטי שירות AWS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            width: 80%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-details {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .service-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-details p {
+            margin: 10px 0;
+        }
+
+        .contact-details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        .layer-info {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>פרטי שירות</h1>
+        <div class="layer-info">המוצר נמצא ברובד 5</div>
+        <div class="service-details" id="serviceDetails"></div>
+    </div>
+
+    <script>
+        // מקבל את שם השירות מה-URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceName = urlParams.get('name');
+
+        // מיכל להצגת פרטי השירות
+        const serviceDetailsContainer = document.getElementById('serviceDetails');
+
+        fetch('FIVE.json')
+        .then(response => response.json())
+        .then(fiveData => {
+            // מחפש את השירות ב-JSON על פי השם מה-URL ומוודא שהשירות לא null
+            const service = fiveData["שירותים מאושרים - AWS"].find(s => s && s.Column5 && s.Column5 === serviceName);
+
+            if (service) {
+                // מציג את פרטי השירות
+                serviceDetailsContainer.innerHTML = `
+                    <h3>${service.Column5}</h3>
+                    <p><strong>שם חברה:</strong> ${service.Column3 || 'לא זמין'}</p>
+                    <p><strong>תיאור:</strong> ${service.Column6 || 'לא זמין'}</p>
+                    <p><strong>פלטפורמת ענן:</strong> ${service.Column7 || 'לא זמין'}</p>
+                    <p><strong>זמן יציאה לאוויר:</strong> ${service.Column11 || 'לא זמין'}</p>
+                    <p><strong>פרטי איש קשר:</strong> ${service.Column10 || 'לא זמין'}</p>
+                `;
+            } else {
+                serviceDetailsContainer.innerHTML = "<p>שירות זה לא נמצא.</p>";
+            }
+        })
+        .catch(error => {
+            console.error('Error loading JSON:', error);
+            serviceDetailsContainer.innerHTML = "<p>אירעה שגיאה בטעינת פרטי השירות.</p>";
+        });
+
+    </script>
+
+</body>
+</html>

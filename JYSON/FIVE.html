@@ -84,19 +84,18 @@ fetch('FIVE.json')
             return;
         }
 
-        // יצירת הריבועים והצגת השירותים
         fiveServices.forEach(service => {
-            const serviceDiv = document.createElement('div');
-            serviceDiv.classList.add('service');
-            serviceDiv.innerHTML = `<h3>${service.Column5}</h3>`;
-            serviceDiv.style.cursor = 'pointer'; // מוודא שהעכבר מראה על הלחיצה
+                if (service.Column5 !== "שם השירות") { // מוודא שהמוצר "שם השירות" לא יוצג
 
-            serviceDiv.addEventListener('click', () => {
-                window.location.href = `FIVE.html?name=${service.Column5}`;
+                const serviceDiv = document.createElement('div');
+                serviceDiv.classList.add('service');
+                serviceDiv.innerHTML = `<h3>${service.Column5}</h3>`;
+                serviceDiv.addEventListener('click', () => {
+                    window.location.href = `FIVE2.html?name=${service.Column5}`;
+                });
+                serviceContainer.appendChild(serviceDiv);
+                }
             });
-
-            serviceContainer.appendChild(serviceDiv);
-        });
     })
     .catch(error => {
         console.error('Error loading JSON:', error);

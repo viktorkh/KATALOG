@@ -66,7 +66,13 @@
     <script>
         // מקבל את השם שהוזן ב-URL
         const urlParams = new URLSearchParams(window.location.search);
-        const searchTerm = urlParams.get('name') || "";
+        const searchTerm = urlParams.get('name') ;
+        const selectedLocation = urlParams.get('location');
+
+        function isServiceInIsrael(region)
+        {
+             return region.toLowerCase() === "ap-east-1"; // בדיקה אם האזור הוא 'il' (ישראל)
+        }
 
         // מיכל להצגת השירותים
         const serviceContainer = document.getElementById('services');
@@ -76,12 +82,21 @@
             fetch('AWS.json').then(response => response.json()),
             fetch('FIVE.json').then(response => response.json())
         ])
-        .then(([awsData, fiveData]) => { // THE FIRST JSON
+            .then(([awsData, fiveData]) => { // THE FIRST JSON
+                // סינון שירותי AWS
+            
+                // סינון שירותי AWS
             const awsServices = awsData.prices.filter(service => 
-                service.attributes["aws:serviceName"].toLowerCase().includes(searchTerm.toLowerCase())
+                (searchTerm ? service.attributes["aws:serviceName"].toLowerCase().includes(searchTerm.toLowerCase()) : true) &&
+                (selectedLocation ? (selectedLocation === "israel" ? isServiceInIsrael(service.attributes["aws:region"]) : !isServiceInIsrael(service.attributes["aws:region"])) : true) // סינון לפי מיקום
             );
 
-            const fiveServices = fiveData["שירותים מאושרים - AWS"].filter(service => service && service.Column5);// THE SEC JSON
+                // חיפוש שירותים מ-FIVE, רק אם המיקום אינו "בחו"ל"
+            const fiveServices = selectedLocation === "abroad" ? [] : fiveData["שירותים מאושרים - AWS"].filter(service => 
+            service && service.Column5 && 
+            (selectedLocation ? (selectedLocation === "ישראל" ? isServiceInIsrael(service.Location) : true) : true) // סינון לפי מיקום
+                );
+            
 
             // מציג את השירותים משני הקבצים
             awsServices.forEach(service => {
@@ -89,7 +104,7 @@
                 serviceDiv.classList.add('service');
                 serviceDiv.innerHTML = `<h3>${service.attributes["aws:serviceName"]}</h3>`;
                 serviceDiv.addEventListener('click', () => {
-                    window.location.href = `ONE.html?name=${service.attributes["aws:serviceName"]}`;
+                    window.location.href = `ONE.html?name=${service.attributes["aws:serviceName"]}&location=${selectedLocation || ''}`;
                 });
                 serviceContainer.appendChild(serviceDiv);
             });
@@ -99,7 +114,7 @@
                 serviceDiv.classList.add('service');
                 serviceDiv.innerHTML = `<h3>${service.Column5}</h3>`;
                 serviceDiv.addEventListener('click', () => {
-                    window.location.href = `FIVE.html?name=${service.Column5}`;
+                    window.location.href = `FIVE2.html?name=${service.Column5}&location=${selectedLocation || ''}`;
                 });
                 serviceContainer.appendChild(serviceDiv);
             });
